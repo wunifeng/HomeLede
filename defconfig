@@ -2732,7 +2732,6 @@ CONFIG_PACKAGE_lua=y
 # CONFIG_PACKAGE_lua-coxpcall is not set
 # CONFIG_PACKAGE_lua-examples is not set
 # CONFIG_PACKAGE_lua-lzlib is not set
-# CONFIG_PACKAGE_lua-maxminddb is not set
 # CONFIG_PACKAGE_lua-md5 is not set
 # CONFIG_PACKAGE_lua-mobdebug is not set
 # CONFIG_PACKAGE_lua-mosquitto is not set
@@ -3415,7 +3414,7 @@ CONFIG_ZSTD_OPTIMIZE_O3=y
 #
 # CONFIG_PACKAGE_libacl is not set
 CONFIG_PACKAGE_libattr=y
-# CONFIG_PACKAGE_libfuse is not set
+CONFIG_PACKAGE_libfuse=m
 # CONFIG_PACKAGE_libow is not set
 # CONFIG_PACKAGE_libow-capi is not set
 CONFIG_PACKAGE_libsysfs=y
@@ -4051,7 +4050,7 @@ CONFIG_PACKAGE_libsmartcols=y
 # CONFIG_PACKAGE_libsndfile is not set
 # CONFIG_PACKAGE_libsoc is not set
 # CONFIG_PACKAGE_libsocks is not set
-CONFIG_PACKAGE_libsodium=m
+CONFIG_PACKAGE_libsodium=y
 
 #
 # Configuration
@@ -4168,11 +4167,6 @@ CONFIG_PACKAGE_luci=y
 # CONFIG_PACKAGE_luci-ssl-openssl is not set
 
 #
-# 2. Clash
-#
-# CONFIG_PACKAGE_luci-app-clash is not set
-
-#
 # 2. Modules
 #
 CONFIG_PACKAGE_luci-base=y
@@ -4217,14 +4211,14 @@ CONFIG_PACKAGE_luci-mod-admin-full=y
 # 3. Applications
 #
 CONFIG_PACKAGE_luci-app-accesscontrol=y
-CONFIG_PACKAGE_luci-app-acme=m
+# CONFIG_PACKAGE_luci-app-acme is not set
 # CONFIG_PACKAGE_luci-app-adblock is not set
 CONFIG_PACKAGE_luci-app-adbyby-plus=m
 CONFIG_PACKAGE_luci-app-adguardhome=y
 # CONFIG_PACKAGE_luci-app-advanced-reboot is not set
 # CONFIG_PACKAGE_luci-app-ahcp is not set
 CONFIG_PACKAGE_luci-app-airplay2=m
-CONFIG_PACKAGE_luci-app-aliddns=y
+# CONFIG_PACKAGE_luci-app-aliddns is not set
 # CONFIG_PACKAGE_luci-app-amule is not set
 CONFIG_PACKAGE_luci-app-aria2=y
 CONFIG_PACKAGE_luci-app-arpbind=m
@@ -4304,7 +4298,7 @@ CONFIG_PACKAGE_luci-app-nlbwmon=y
 # CONFIG_PACKAGE_luci-app-olsr is not set
 # CONFIG_PACKAGE_luci-app-olsr-services is not set
 # CONFIG_PACKAGE_luci-app-olsr-viz is not set
-CONFIG_PACKAGE_luci-app-openclash=y
+# CONFIG_PACKAGE_luci-app-openclash is not set
 # CONFIG_PACKAGE_luci-app-openvpn is not set
 CONFIG_PACKAGE_luci-app-openvpn-server=m
 # CONFIG_PACKAGE_luci-app-p910nd is not set
@@ -4315,20 +4309,20 @@ CONFIG_PACKAGE_luci-app-passwall=y
 # Configuration
 #
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ipt2socks=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks is not set
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_socks is not set
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_socks=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_socks=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan is not set
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook is not set
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_kcptun is not set
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_kcptun=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_haproxy=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ChinaDNS_NG=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_pdnsd=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_dns2socks=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_v2ray-plugin is not set
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_simple-obfs is not set
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_v2ray-plugin=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_simple-obfs=y
 # CONFIG_PACKAGE_luci-app-polipo is not set
 CONFIG_PACKAGE_luci-app-pppoe-relay=m
 # CONFIG_PACKAGE_luci-app-pppoe-server is not set
@@ -4338,7 +4332,7 @@ CONFIG_PACKAGE_luci-app-qbittorrent=m
 # CONFIG_PACKAGE_luci-app-qos is not set
 # CONFIG_PACKAGE_luci-app-radicale is not set
 CONFIG_PACKAGE_luci-app-ramfree=y
-# CONFIG_PACKAGE_luci-app-rclone is not set
+CONFIG_PACKAGE_luci-app-rclone=m
 # CONFIG_PACKAGE_luci-app-rp-pppoe-server is not set
 CONFIG_PACKAGE_luci-app-samba=y
 # CONFIG_PACKAGE_luci-app-samba4 is not set
@@ -4354,6 +4348,13 @@ CONFIG_PACKAGE_luci-app-sqm=y
 # CONFIG_PACKAGE_luci-app-squid is not set
 # CONFIG_PACKAGE_luci-app-ssr-libev-server is not set
 # CONFIG_PACKAGE_luci-app-ssr-mudb-server is not set
+CONFIG_PACKAGE_luci-app-ssr-plus=m
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
 # CONFIG_PACKAGE_luci-app-ssr-python-pro-server is not set
 # CONFIG_PACKAGE_luci-app-ssrserver-python is not set
 CONFIG_PACKAGE_luci-app-statistics=y
@@ -4379,11 +4380,6 @@ CONFIG_PACKAGE_luci-app-vlmcsd=y
 # CONFIG_PACKAGE_luci-app-vnstat is not set
 # CONFIG_PACKAGE_luci-app-vpnbypass is not set
 CONFIG_PACKAGE_luci-app-vsftpd=y
-# CONFIG_PACKAGE_luci-app-vssr is not set
-CONFIG_PACKAGE_luci-app-vssr_INCLUDE_V2ray=y
-CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Trojan=y
-# CONFIG_PACKAGE_luci-app-vssr_INCLUDE_ShadowsocksR_Server is not set
-CONFIG_PACKAGE_luci-app-vssr_INCLUDE_ShadowsocksR_Socks=y
 CONFIG_PACKAGE_luci-app-watchcat=y
 # CONFIG_PACKAGE_luci-app-webadmin is not set
 # CONFIG_PACKAGE_luci-app-wifischedule is not set
@@ -4450,7 +4446,6 @@ CONFIG_PACKAGE_default-settings=y
 CONFIG_PACKAGE_luci-i18n-accesscontrol-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-adbyby-plus-zh-cn=m
 CONFIG_PACKAGE_luci-i18n-airplay2-zh-cn=m
-CONFIG_PACKAGE_luci-i18n-aliddns-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-aria2-pt-br is not set
 # CONFIG_PACKAGE_luci-i18n-aria2-ru is not set
 # CONFIG_PACKAGE_luci-i18n-aria2-sv is not set
@@ -4593,6 +4588,9 @@ CONFIG_PACKAGE_luci-i18n-openvpn-server-zh-cn=m
 CONFIG_PACKAGE_luci-i18n-pppoe-relay-zh-cn=m
 CONFIG_PACKAGE_luci-i18n-qbittorrent-zh-cn=m
 CONFIG_PACKAGE_luci-i18n-ramfree-zh-cn=y
+# CONFIG_PACKAGE_luci-i18n-rclone-en is not set
+CONFIG_PACKAGE_luci-i18n-rclone-zh-cn=m
+# CONFIG_PACKAGE_luci-i18n-rclone-zh_Hans is not set
 # CONFIG_PACKAGE_luci-i18n-samba-ca is not set
 # CONFIG_PACKAGE_luci-i18n-samba-cs is not set
 # CONFIG_PACKAGE_luci-i18n-samba-de is not set
@@ -4622,6 +4620,7 @@ CONFIG_PACKAGE_luci-i18n-smartdns-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-softethervpn-zh-cn=m
 # CONFIG_PACKAGE_luci-i18n-sqm-en is not set
 CONFIG_PACKAGE_luci-i18n-sqm-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-ssr-plus-zh-cn=m
 # CONFIG_PACKAGE_luci-i18n-statistics-ca is not set
 # CONFIG_PACKAGE_luci-i18n-statistics-cs is not set
 # CONFIG_PACKAGE_luci-i18n-statistics-de is not set
@@ -4862,7 +4861,7 @@ CONFIG_PACKAGE_transmission-web-control=m
 #
 # Cloud Manager
 #
-# CONFIG_PACKAGE_rclone-webui-react is not set
+CONFIG_PACKAGE_rclone-webui-react=m
 
 #
 # Download Manager
@@ -5017,7 +5016,7 @@ CONFIG_PACKAGE_avahi-dbus-daemon=m
 # CONFIG_PACKAGE_avahi-utils is not set
 # CONFIG_PACKAGE_bind-check is not set
 CONFIG_PACKAGE_bind-client=y
-CONFIG_PACKAGE_bind-dig=y
+# CONFIG_PACKAGE_bind-dig is not set
 # CONFIG_PACKAGE_bind-dnssec is not set
 # CONFIG_PACKAGE_bind-host is not set
 # CONFIG_PACKAGE_bind-rndc is not set
@@ -5515,7 +5514,7 @@ CONFIG_PACKAGE_frps=m
 CONFIG_PACKAGE_haproxy=y
 # CONFIG_PACKAGE_halog is not set
 # CONFIG_PACKAGE_haproxy-nossl is not set
-CONFIG_PACKAGE_kcptun-client=m
+CONFIG_PACKAGE_kcptun-client=y
 # CONFIG_PACKAGE_kcptun-server is not set
 # CONFIG_PACKAGE_lighttpd is not set
 CONFIG_PACKAGE_nginx=y
@@ -5578,14 +5577,14 @@ CONFIG_PACKAGE_pdnsd-alt=y
 # CONFIG_PACKAGE_radicale2-examples is not set
 # CONFIG_PACKAGE_radicale2-src is not set
 # CONFIG_PACKAGE_shadowsocks-client is not set
-CONFIG_PACKAGE_shadowsocks-libev-ss-local=m
-CONFIG_PACKAGE_shadowsocks-libev-ss-redir=m
+CONFIG_PACKAGE_shadowsocks-libev-ss-local=y
+CONFIG_PACKAGE_shadowsocks-libev-ss-redir=y
 # CONFIG_PACKAGE_shadowsocks-libev-ss-rules is not set
 # CONFIG_PACKAGE_shadowsocks-libev-ss-server is not set
 # CONFIG_PACKAGE_shadowsocks-libev-ss-tunnel is not set
 # CONFIG_PACKAGE_shadowsocksr-libev is not set
 CONFIG_PACKAGE_shadowsocksr-libev-alt=y
-CONFIG_PACKAGE_shadowsocksr-libev-server=m
+CONFIG_PACKAGE_shadowsocksr-libev-server=y
 CONFIG_PACKAGE_shadowsocksr-libev-ssr-local=y
 # CONFIG_PACKAGE_sockd is not set
 # CONFIG_PACKAGE_socksify is not set
@@ -5641,7 +5640,7 @@ CONFIG_PACKAGE_6in4=y
 # CONFIG_PACKAGE_6rd is not set
 # CONFIG_PACKAGE_6to4 is not set
 CONFIG_PACKAGE_AdGuardHome=y
-CONFIG_PACKAGE_acme=m
+# CONFIG_PACKAGE_acme is not set
 # CONFIG_PACKAGE_acme-dnsapi is not set
 # CONFIG_PACKAGE_adblock is not set
 CONFIG_PACKAGE_adbyby=m
@@ -5659,7 +5658,7 @@ CONFIG_PACKAGE_baidupcs-web=y
 # CONFIG_PACKAGE_batctl-tiny is not set
 # CONFIG_PACKAGE_beanstalkd is not set
 # CONFIG_PACKAGE_bmon is not set
-# CONFIG_PACKAGE_brook is not set
+CONFIG_PACKAGE_brook=y
 # CONFIG_PACKAGE_bwm-ng is not set
 # CONFIG_PACKAGE_chat is not set
 CONFIG_PACKAGE_chinadns-ng=y
@@ -5671,9 +5670,9 @@ CONFIG_PACKAGE_cifsmount=y
 # CONFIG_PACKAGE_darkstat is not set
 # CONFIG_PACKAGE_dhcpcd is not set
 # CONFIG_PACKAGE_dmapd is not set
-CONFIG_PACKAGE_dnscrypt-proxy2=y
+# CONFIG_PACKAGE_dnscrypt-proxy2 is not set
 # CONFIG_PACKAGE_dnsforwarder is not set
-# CONFIG_PACKAGE_dnsmasq-china-list is not set
+CONFIG_PACKAGE_dnsmasq-china-list=y
 # CONFIG_PACKAGE_ds-lite is not set
 # CONFIG_PACKAGE_dsmboot is not set
 # CONFIG_PACKAGE_eapol-test is not set
@@ -5852,8 +5851,7 @@ CONFIG_PACKAGE_smartdns=y
 # CONFIG_PACKAGE_snmpd is not set
 # CONFIG_PACKAGE_snmpd-static is not set
 # CONFIG_PACKAGE_snmptrapd is not set
-CONFIG_PACKAGE_socat=m
-# CONFIG_SOCAT_SSL is not set
+# CONFIG_PACKAGE_socat is not set
 # CONFIG_PACKAGE_softflowd is not set
 # CONFIG_PACKAGE_soloscli is not set
 # CONFIG_PACKAGE_stunnel is not set
@@ -6060,7 +6058,7 @@ CONFIG_PACKAGE_e2fsprogs=y
 # CONFIG_PACKAGE_f2fsck is not set
 # CONFIG_PACKAGE_filefrag is not set
 # CONFIG_PACKAGE_fstrim is not set
-# CONFIG_PACKAGE_fuse-utils is not set
+CONFIG_PACKAGE_fuse-utils=m
 # CONFIG_PACKAGE_hfsfsck is not set
 # CONFIG_PACKAGE_lsattr is not set
 CONFIG_PACKAGE_mkf2fs=y
@@ -6526,7 +6524,7 @@ CONFIG_PACKAGE_openssl-util=y
 # CONFIG_PACKAGE_pv is not set
 # CONFIG_PACKAGE_qmi-utils is not set
 # CONFIG_PACKAGE_qrencode is not set
-# CONFIG_PACKAGE_rclone is not set
+CONFIG_PACKAGE_rclone=m
 # CONFIG_PACKAGE_relayctl is not set
 # CONFIG_PACKAGE_rename is not set
 # CONFIG_PACKAGE_rng-tools is not set
